@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"prepare": "husky install",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
@@ -22,6 +23,8 @@
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.2.0",
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.4",
 		"prettier-plugin-svelte": "^2.8.1",
