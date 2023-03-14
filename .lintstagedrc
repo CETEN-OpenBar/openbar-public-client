@@ -1,3 +1,3 @@
 {
-	"*.{svelte,js,ts,html,css,cjs,json}": "pnpm format --",
+	"*.{svelte,js,ts,html,css,cjs,json}": "pnpm format --"
 }
