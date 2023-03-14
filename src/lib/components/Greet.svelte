@@ -1,11 +1,9 @@
 <script>
-	import { invoke } from '@tauri-apps/api/tauri';
-
 	let name = '';
 	let greetMsg = '';
 
-	async function greet() {
-		greetMsg = await invoke('greet', { name });
+	function greet() {
+		greetMsg = `Welcome, ${name}!`;
 	}
 </script>
 

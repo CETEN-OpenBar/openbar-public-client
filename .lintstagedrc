@@ -1,4 +1,3 @@
 {
 	"*.{svelte,js,ts,html,css,cjs,json}": "pnpm format --",
-	"*.rs": "rustfmt"
 }
