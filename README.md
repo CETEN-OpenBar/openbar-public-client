@@ -13,4 +13,4 @@
 
 Start by installing the project dependencies with `pnpm install`.
 
-You can run the dev server with `pnpm tauri dev`.
+You can run the dev server with `pnpm dev`.
