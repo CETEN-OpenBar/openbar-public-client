@@ -6,7 +6,7 @@ on:
   pull_request:
   workflow_dispatch:
 jobs:
-  lint-web:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -23,6 +23,6 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
-      - name: Build projett
+      - name: Build project
         run: pnpm build
 
