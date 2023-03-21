@@ -25,9 +25,6 @@
 				on:click={() => {
 					addItemsToCart(item);
 				}}
-				on:touchend={() => {
-					addItemsToCart(item);
-				}}
 				on:keypress={() => {}}
 			>
 				<figure>
