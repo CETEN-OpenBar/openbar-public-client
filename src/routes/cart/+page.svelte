@@ -9,17 +9,17 @@
 	});
 </script>
 
-<div class="w-full h-screen flex flex-col justify-center items-center">
+<div class="flex h-screen w-full flex-col items-center justify-center">
 	<a href="/shop/food" class="self-start pt-6 pl-6">
 		<span>&larr;&nbsp;Previous</span>
 	</a>
-	<h2 class="p-6 text-3xl text-primary font-bold self-start">Shop Cart</h2>
-	<div class="grow w-[90%] h-full bg-base-300 rounded-lg relative">
+	<h2 class="self-start p-6 text-3xl font-bold text-primary">Shop Cart</h2>
+	<div class="relative h-full w-[90%] grow rounded-lg bg-base-300">
 		{#each items as [shopItem, number]}
 			<div class="flex justify-between p-4">
 				{shopItem.name} x {number}
 			</div>
 		{/each}
 	</div>
-	<button class="mt-4 mb-4 btn btn-wide btn-primary self-center"> Buy ! </button>
+	<button class="btn-primary btn-wide btn mt-4 mb-4 self-center"> Buy ! </button>
 </div>

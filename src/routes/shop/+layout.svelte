@@ -25,20 +25,20 @@
 	}
 </script>
 
-<div class="w-full h-full">
+<div class="h-full w-full">
 	<div class="p-6">
 		<div class="drawer">
 			<input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
 			<div class="drawer-content flex flex-col">
 				<!-- Navbar -->
-				<div class="w-full navbar bg-base-300">
+				<div class="navbar w-full bg-base-300">
 					<div class="flex-none lg:hidden">
-						<label for="my-drawer-3" class="btn btn-square btn-ghost">
+						<label for="my-drawer-3" class="btn-ghost btn-square btn">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
 								viewBox="0 0 24 24"
-								class="inline-block w-6 h-6 stroke-current"
+								class="inline-block h-6 w-6 stroke-current"
 								><path
 									stroke-linecap="round"
 									stroke-linejoin="round"
@@ -48,19 +48,19 @@
 							>
 						</label>
 					</div>
-					<div class="flex-1 sm:hidden px-2 mx-2 font-bold text-secondary text-lg">
+					<div class="mx-2 flex-1 px-2 text-lg font-bold text-secondary sm:hidden">
 						{titleCaseWord(currentShop)}
 					</div>
-					<div class="hidden flex-1 sm:block px-2 mx-2 font-bold text-secondary text-lg">
+					<div class="mx-2 hidden flex-1 px-2 text-lg font-bold text-secondary sm:block">
 						OpenBar
 					</div>
-					<div class="indicator flex-none block sm:hidden mr-2">
-						<span class="indicator-item badge badge-secondary w-4 h-4 rounded-full"
+					<div class="indicator mr-2 block flex-none sm:hidden">
+						<span class="badge-secondary badge indicator-item h-4 w-4 rounded-full"
 							>{itemsSize()}</span
 						>
 						<a href="/cart">
 							<svg
-								class="w-7 h-7"
+								class="h-7 w-7"
 								fill="none"
 								stroke="currentColor"
 								stroke-width="1.5"
@@ -76,14 +76,14 @@
 							</svg>
 						</a>
 					</div>
-					<div class="flex-none hidden lg:block">
+					<div class="hidden flex-none lg:block">
 						<ul class="menu menu-horizontal">
 							<!-- Navbar menu content here -->
 							{#each shop as item}
 								<li>
 									<a
 										href="/shop/{item}"
-										class="font-semibold text-lg {currentShop === item ? 'text-primary' : ''}"
+										class="text-lg font-semibold {currentShop === item ? 'text-primary' : ''}"
 										on:click={() => {
 											updateCurrentShop(item);
 										}}
@@ -98,30 +98,30 @@
 					<div class="w-full sm:w-8/12">
 						<slot />
 					</div>
-					<div class="hidden sm:block w-4/12">
-						<div class="w-[90%] h-[85vh] flex flex-col">
-							<h2 class="p-6 text-3xl text-primary font-bold">Shop Cart</h2>
-							<div class="grow w-full h-full bg-base-300 rounded-lg relative">
+					<div class="hidden w-4/12 sm:block">
+						<div class="flex h-[85vh] w-[90%] flex-col">
+							<h2 class="p-6 text-3xl font-bold text-primary">Shop Cart</h2>
+							<div class="relative h-full w-full grow rounded-lg bg-base-300">
 								{#each items as [shopItem, number]}
 									<div class="flex justify-between p-4">
 										{shopItem.name} x {number}
 									</div>
 								{/each}
 							</div>
-							<button class="mt-4 mb-4 btn btn-wide btn-primary self-center"> Buy ! </button>
+							<button class="btn-primary btn-wide btn mt-4 mb-4 self-center"> Buy ! </button>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="drawer-side">
 				<label for="my-drawer-3" class="drawer-overlay" />
-				<ul class="menu p-4 w-80 bg-base-100">
+				<ul class="menu w-80 bg-base-100 p-4">
 					<!-- Sidebar content here -->
 					{#each shop as item}
 						<li>
 							<a
 								href="/shop/{item}"
-								class="font-semibold text-lg {currentShop === item ? 'text-primary' : ''}"
+								class="text-lg font-semibold {currentShop === item ? 'text-primary' : ''}"
 								on:click={() => {
 									updateCurrentShop(item);
 								}}
