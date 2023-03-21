@@ -17,11 +17,11 @@
 	}
 </script>
 
-<div class="w-full flex justify-center">
-	<div class="flex flex-wrap justify-center sm:justify-start gap-4 p-4">
+<div class="flex w-full justify-center">
+	<div class="flex flex-wrap justify-center gap-4 p-4 sm:justify-start">
 		{#each data.items as item}
 			<div
-				class="card w-52 h-72 bg-base-100 shadow-xl cursor-pointer"
+				class="card h-72 w-52 cursor-pointer bg-base-100 shadow-xl"
 				on:click={() => {
 					addItemsToCart(item);
 				}}
@@ -31,13 +31,13 @@
 					<img src={item.image} alt={item.name} />
 				</figure>
 				<div class="flex flex-col p-2">
-					<h2 class="text-2xl font-bold mb-2 flex items-center">
+					<h2 class="mb-2 flex items-center text-2xl font-bold">
 						{item.name}
 						<!-- <div class="ml-4 badge badge-secondary">NEW</div> -->
 					</h2>
 					<p>{item.description}</p>
-					<div class="flex w-full justify-end mt-2 mb-2">
-						<span class="font-bold text-primary text-3xl">{item.price}&nbsp;€</span>
+					<div class="mt-2 mb-2 flex w-full justify-end">
+						<span class="text-3xl font-bold text-primary">{item.price}&nbsp;€</span>
 					</div>
 				</div>
 			</div>

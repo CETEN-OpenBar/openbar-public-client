@@ -9,6 +9,6 @@
 	];
 </script>
 
-<div class="w-full h-screen">
+<div class="h-screen w-full">
 	<Carousel {items} />
 </div>
